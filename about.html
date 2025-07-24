@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us -  School</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>About Our School</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Who We Are</h2>
+      <p> School is committed to providing a quality education that nurtures individual potential.</p>
+    </section>
+
+
+
+
+<section class="image-slider">
+  <h2>Our Campus Gallery</h2>
+  <div class="slider">
+    <img src="images/2.jpg" alt="School Image 1" class="slide">
+    <img src="images/3.jpg" alt="School Image 2" class="slide">
+    <img src="images/1.jpg" alt="School Image 3" class="slide">
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  // Hide all slides initially
+  slides.forEach((slide, index) => {
+    slide.style.display = index === 0 ? 'block' : 'none';
+  });
+
+  setInterval(() => {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.display = 'block';
+  }, 3000); // 3 seconds per image
+</script>
+
+
+
+  </main>
+  <footer>
+    <p>&copy; 2025  School. All rights reserved.</p>
+  </footer>
+</body>
+</html>
